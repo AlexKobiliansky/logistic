@@ -3,18 +3,89 @@
 
 /*==========  Desktop First  ==========*/
 
+@media screen and (max-width: 1450px)
+  .intro-slide
+    h1
+      margin-top: 100px
+
 // ≥1200px
 +media-breakpoint-down(lg)
+
+  .main-head
+    height: auto
+    &:before
+      display: none
+    &:after
+      display: none
+
+  .intro-slide
+    height: auto
+    min-height: auto
+
+  .intro-slider
+    padding-bottom: 150px
+
+  .top-line
+    padding: 12px 0
+  .main-mnu
+    display: none
+  .hamburger
+    display: inline-block
+    position: relative
+    top: 3px
 
 // ≥992px
 +media-breakpoint-down(md)
 
+  .intro-slide
+    h1
+      font-size: 50px
+
 // ≥768px
 +media-breakpoint-down(sm)
+
+  .intro-slide
+    h1
+      font-size: 36px
+    h2
+      font-size: 20px
+
+  .top-line
+    .container
+      flex-wrap: wrap
+
+  .head-contacts
+    order: 2
+    margin-top: 30px
+    width: 100%
+    display: flex
+    justify-content: space-between
+    align-items: center
 
 // ≥480px
 +media-breakpoint-down(xs)
 
+  .intro-progressbar
+    display: none
+
+  .intro-count
+    left: 115px
+
+
+  .intro-slide
+    h1
+      font-size: 28px
+    h2
+      font-size: 18px
+
+  .head-contacts
+    flex-direction: column
+    a
+      text-align: center
+      width: 175px
+    .btn-blue
+      margin-left: 0
+      margin-top: 15px
 
 /*==========  Mobile First  ==========*/
 

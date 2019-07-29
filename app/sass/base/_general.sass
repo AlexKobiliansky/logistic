@@ -64,5 +64,45 @@ ul
   display: none!important
 
 // ======= END TEMPLATE STYLES =======
+.btn
+  display: inline-block
+  line-height: 1
+  +mt(.3s)
+  font-weight: 700
+  font-size: 16px
+  text-transform: uppercase
+  text-align: center
+  padding: 15px 10px
+  min-width: 195px
+  white-space: nowrap
+
+.btn-blue
+  background-color: $accent
+  color: #fff
+  box-shadow: none
+  &:hover
+    box-shadow: 0 0 10px 3px rgba($accent, .5)
+
+
+.owl-carousel
+  .owl-nav
+    button.owl-prev, button.owl-next
+      width: 40px
+      height: 40px
+      border: 1px solid #7d8386
+      border-radius: 50%
+      +mt(.3s)
+      background-image: url('../img/icons/arrow-white.svg')
+      background-position: center center
+      background-size: 9px 16px
+      background-repeat: no-repeat
+      &:hover
+        border-color: #fff
+        background-image: url('../img/icons/arrow-accent.svg')
+    button.owl-prev
+      transform: rotate(180deg)
+
+section
+  padding: 100px 0
 
 

@@ -1,0 +1,169 @@
+.main-head
+  +bg-cover
+  color: #fff
+  height: 100vh
+  min-height: 680px
+  position: relative
+  &:before
+    content: ''
+    position: absolute
+    height: 100%
+    width: 1px
+    background-color: #7d7e7f
+    left: calc((100vw - 1170px)/4)
+    top: 0
+  &:after
+    content: ''
+    position: absolute
+    height: 100%
+    width: 1px
+    right: calc((100vw - 1170px)/4)
+    top: 0
+    background-color: #b2b2b1
+
+.top-line
+  border-bottom: 1px solid #808080
+  .container
+    display: flex
+    justify-content: space-between
+    align-items: center
+  .btn-blue
+    min-width: auto
+    margin-left: 30px
+  .call
+    font-size: 16px
+    +mt(.3s)
+    color: #fff
+    font-weight: 700
+    &:hover
+      color: $accent
+
+.head-contacts
+  position: relative
+  top: -2px
+
+//main-mnu
+.sm-mint a, .sm-mint a.highlighted, .sm-mint a:active, .sm-mint a:focus, .sm-mint a:hover
+  color: #fff
+  padding: 45px 0
+  display: inline-block
+  font-size: 14px
+  text-transform: uppercase
+  text-align: center
+  +mt(.3s)
+  background-color: transparent
+  font-weight: normal
+  &:after
+    display: block
+    content: attr(title)
+    font-weight: bold
+    height: 0
+    overflow: hidden
+    visibility: hidden
+    +mt(.3s)
+
+.sm-mint a.has-submenu
+  padding-right: 0
+
+.sm-mint
+  a
+    border-bottom: 2px solid transparent
+    &:hover
+      border-color: #fff
+
+.sm-mint a .sub-arrow
+  display: none
+
+.sm-mint
+  border-bottom: none
+
+.sm-mint a:active, .sm-mint a:focus, .sm-mint a:hover
+  background-color: transparent
+  font-weight: 700
+
+.sm-mint
+  li
+    margin-right: 30px
+    font-size: 0
+    display: inline-block
+    &:last-child
+      margin-right: 0
+  ul
+    background: #fff
+    z-index: 2
+    font-size: 14px
+    border-radius: 0
+    border-top: 2px solid $accent
+    width: auto!important
+    padding: 10px 0
+    top: 90px!important
+    li
+      background-color: #fff
+      margin-right: 0
+      width: 100%
+      text-align: left
+      white-space: nowrap
+      a
+        text-align: left
+        text-transform: none
+        white-space: nowrap
+        &:hover
+          text-align: left
+          background-color: #fff
+          color: $accent
+          font-weight: normal
+          text-transform: none
+//end main-mnu
+
+
+//mmenu customization start
+.mm-menu_theme-dark
+  background-color: rgba(255,255,255,.3)
+  text-transform: uppercase
+
+.mm-logo
+  display: block
+  margin: 0 auto
+  transform: scaleY(.90)
+
+.mm-navbars_top
+  border-color: transparent
+
+.mm-listitem, .mm-listitem .mm-btn_next, .mm-listitem .mm-btn_next:before, .mm-listitem:after, .mm-listview
+  border-color: rgba(#fff, .3)
+
+.mm-listitem
+  a
+    padding-top: 14px
+    padding-bottom: 12px
+
+.mm-navbars_top
+  .mm-navbar
+    border: none
+    height: 100px
+
+.mm-navbar
+  border-color: rgba(#fff, .3)
+
+.mm-menu_theme-dark .mm-navbar a, .mm-menu_theme-dark .mm-navbar>*
+  font-size: 20px
+  color: #fff
+  letter-spacing: 2px
+
+.mm-menu_theme-dark .mm-listview a:not(.mm-btn_next)
+  color: #fff
+//mmenu customization end
+
+.hamburger
+  display: none
+  &.is-active
+    .hamburger-inner, .hamburger-inner:after, .hamburger-inner:before
+      background-color: #fff
+  &:hover
+    opacity: 1
+    .hamburger-inner, .hamburger-inner:after, .hamburger-inner:before
+      background-color: $accent
+
+
+.hamburger-inner, .hamburger-inner:after, .hamburger-inner:before
+  background-color: #fff
