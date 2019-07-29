@@ -1,0 +1,100 @@
+.s-contacts
+  padding: 0
+  position: relative
+  .s-map
+    height: 525px
+  .contacts-block-wrap
+    position: absolute
+    height: 100%
+    width: 40%
+    background-color: rgba($text, .9)
+    z-index: 3
+    left: 0
+    top: 0
+  .contacts-block
+    margin-left: calc((100vw - 1170px)/2)
+
+.contacts-block
+  padding-top: 70px
+  color: #fff
+
+.contacts-title
+  font-size: 22px
+  font-weight: 700
+  margin-bottom: 25px
+
+
+.contact-item
+  display: flex
+  width: 60%
+  margin-bottom: 20px
+  &-icon
+    width: 40px
+  &-content
+    width: calc(100% - 40px)
+  &-title
+    font-size: 16px
+    font-weight: 700
+    line-height: 1
+    margin-bottom: 5px
+  a
+    +mt(.3s)
+    color: #fff
+    &:hover
+      color: $accent
+
+
+.s-map
+  position: relative
+
+#map
+  height: 100%
+  position: relative
+  +bg-cover
+
+.loader
+  position: absolute
+  top: 0
+  left: 0
+  box-sizing: border-box
+  width: 100%
+  height: 100%
+  overflow: hidden
+  color: #000000
+  transition: opacity .7s ease
+  opacity: 0
+  background-color: rgba(0,0,0,.55)
+  z-index: -2
+
+.loader:after,
+.loader:before
+  box-sizing: border-box
+
+.loader.is-active
+  top: 0
+  opacity: 1
+  z-index: 2
+
+.loader-default:after
+  position: absolute
+  top: calc(50% - 24px)
+  left: calc(50% - 24px)
+  width: 48px
+  height: 48px
+  content: ''
+  animation: rotation 1s linear infinite
+  border: solid 8px #ffffff
+  border-left-color: transparent
+  border-radius: 50%
+
+@keyframes rotation
+  from
+    transform: rotate(0)
+  to
+    transform: rotate(359deg)
+
+@keyframes blink
+  from
+    opacity: .5
+  to
+    opacity: 1
