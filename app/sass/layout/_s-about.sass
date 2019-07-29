@@ -1,0 +1,32 @@
+.s-about
+  .section-title
+    margin-bottom: 40px
+    font-size: 36px
+
+.about-desc
+  font-weight: 300
+  margin-bottom: 60px
+
+.about-contacts
+  padding-left: 65px
+  text-align: right
+  position: relative
+  padding-right: 30px
+  .btn
+    margin-left: 30px
+  .call
+    font-size: 22px
+    font-weight: 700
+    color: $text
+    +mt(.3s)
+    &:hover
+      color: $accent
+  &:before
+    position: absolute
+    content: ''
+    width: 34px
+    height: 34px
+    background-image: url('../img/icons/phone-icon.svg')
+    +bg-cover
+    left: 30px
+    top: 0

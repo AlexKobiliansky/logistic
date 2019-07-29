@@ -11,6 +11,12 @@
 // ≥1200px
 +media-breakpoint-down(lg)
 
+  .about-contacts
+    padding-right: 0
+    padding-left: 0
+    &:before
+      left: 0
+
   .main-head
     height: auto
     &:before
@@ -37,12 +43,24 @@
 // ≥992px
 +media-breakpoint-down(md)
 
+  .about-img
+    margin-left: auto
+    margin-right: auto
+    margin-top: 40px
+
   .intro-slide
     h1
       font-size: 50px
 
 // ≥768px
 +media-breakpoint-down(sm)
+
+  .section-title
+    font-size: 30px
+
+  .s-about
+    .section-title
+      font-size: 30px
 
   .intro-slide
     h1
@@ -64,6 +82,37 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  section
+    padding: 50px 0
+
+  .section-title
+    font-size: 24px
+
+  .s-about
+    .section-title
+      font-size: 24px
+      margin-bottom: 25px
+
+  .about-contacts
+    text-align: center
+    &:before
+      display: none
+    .call
+      display: block
+    .btn
+      margin-left: 0
+      margin-top: 20px
+
+  .about-desc
+    margin-bottom: 25px
+
+  .section-pretitle
+    margin-bottom: 25px
+    &:before
+      display: none
+
+      margin-bottom: 25px
 
   .intro-progressbar
     display: none
