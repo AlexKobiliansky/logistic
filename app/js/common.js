@@ -128,6 +128,20 @@ $(document).ready(function(){
         }, 'xml');
     });
 
+
+    function heightses() {
+
+        if ($(window).width()>=768) {
+            $('.service-item-title').height('auto').matchHeight({byRow: true});
+            $('.service-item-desc').height('auto').matchHeight({byRow: true});
+        }
+    }
+
+    $(window).resize(function() {
+        heightses();
+    });
+    heightses();
+
     //E-mail Ajax Send
     $("form").submit(function() { //Change
         var th = $(this);

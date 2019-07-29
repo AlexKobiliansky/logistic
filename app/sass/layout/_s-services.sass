@@ -1,0 +1,50 @@
+.services-wrap
+  margin-top: 60px
+
+.service-item
+  display: block
+  background-color: #fff
+  padding: 50px 30px
+  margin-bottom: 30px
+  color: $text
+  +mt(.3s)
+  &>span
+    display: block
+  &-img
+    position: relative
+    margin-bottom: 20px
+    height: 95px
+    img
+      +mt(.3s)
+    .icon-white
+      position: absolute
+      left: 0
+      bottom: 0
+      z-index: 2
+      opacity: 0
+    .icon-colored
+      position: absolute
+      left: 0
+      bottom: 0
+      z-index: 1
+      opacity: 1
+  &-title
+    font-size: 22px
+    font-weight: bold
+    margin-bottom: 20px
+    line-height: 1.2
+    +mt(.3s)
+    color: $text
+  &-desc
+    font-weight: 300
+    color: $text
+  &:hover
+    background-color: $text
+    .icon-white
+      opacity: 1
+    .icon-colored
+      opacity: 0
+    .service-item-title
+      color: $accent
+    .service-item-desc
+      color: #fff
