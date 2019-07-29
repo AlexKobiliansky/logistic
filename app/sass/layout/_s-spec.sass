@@ -1,0 +1,76 @@
+.spec-wrap
+  margin-top: 50px
+
+
+.spec-item
+  height: 310px
+  +bg-cover
+  position: relative
+  color: #fff
+  overflow: hidden
+  margin-bottom: 30px
+  &-content
+    position: absolute
+    width: 100%
+    height: 100%
+    padding: 30px
+    top: 220px
+    z-index: 2
+    +mt(.5s)
+  &:before
+    content: ''
+    position: absolute
+    left: 0
+    right: 0
+    top: 0
+    bottom: 0
+    background: linear-gradient(to top, #157eb2 0, rgba(#000, .4) 100%)
+    +mt(.5s)
+    opacity: 0
+  &-title
+    font-size: 22px
+    position: relative
+    line-height: 1.2
+    margin-bottom: 20px
+    &:before
+      content: ''
+      position: absolute
+      width: 40px
+      height: 2px
+      background-color: $accent
+      top: -17px
+      left: 0
+      opacity: 1
+      +mt(.5s)
+  a
+    font-size: 16px
+    text-transform: uppercase
+    font-weight: 700
+    color: #fff
+    line-height: 1
+    position: relative
+    +mt(.5s)
+    opacity: 0
+    &:after
+      content: ''
+      position: absolute
+      width: 100%
+      height: 2px
+      background-color: #fff
+      bottom: -2px
+      left: 0
+      +mt(.3s)
+      opacity: 0
+    &:hover
+      &:after
+        opacity: 1
+  &:hover
+    &:before
+      opacity: 1
+    .spec-item-content
+      top: 150px
+    .spec-item-title
+      &:before
+        opacity: 0
+    a
+      opacity: 1
