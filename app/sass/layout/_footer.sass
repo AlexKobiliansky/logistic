@@ -1,0 +1,61 @@
+.main-foot
+  background-color: #252525
+  color: #fff
+  padding-top: 40px
+  h4
+    text-transform: uppercase
+    font-size: 14px
+    font-weight: normal
+    margin-bottom: 25px
+    line-height: 1
+  ul
+    margin-bottom: 30px
+    a
+      display: inline-block
+      +mt(.3s)
+      font-weight: 300
+      color: #a9a9a9
+      margin-bottom: 12px
+      &:hover
+        color: #fff
+    &.no-h
+      padding-top: 39px
+
+.foot-contacts
+  p
+    margin-bottom: 5px
+  .call
+    +mt(.3s)
+    color: #fff
+    &:hover
+      color: $accent
+  .recall
+    color: $accent
+    text-decoration: underline
+    &:hover
+      color: $accent
+      text-decoration: none
+
+.foot-socials
+  margin-top: 20px
+  margin-bottom: 40px
+  .soc-item
+    display: inline-block
+    margin-right: 18px
+    .svg
+      height: 18px
+      width: auto
+      +mt(.3s)
+      fill: #a9a9a9
+    &:last-child
+      margin-right: 0
+    &:hover
+      .svg
+        fill: $accent
+
+.copy-line
+  line-height: 1
+  text-align: center
+  background-color: #000
+  color: #666
+  padding: 12px
