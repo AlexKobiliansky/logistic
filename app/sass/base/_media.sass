@@ -53,6 +53,9 @@
 // ≥992px
 +media-breakpoint-down(md)
 
+  .benefit-item
+    margin-bottom: 50px
+
   .jq-selectbox__select
     line-height: 1.4
 
@@ -74,6 +77,16 @@
 
 // ≥768px
 +media-breakpoint-down(sm)
+
+  .benefit-item
+    &-num
+      text-align: center
+      font-size: 50px
+      margin-bottom: 10px
+    &-desc
+      font-size: 18px
+    &-content
+      align-items: center
 
   .specicon-item
     width: calc(50% - 16px)
