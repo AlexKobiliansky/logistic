@@ -1,28 +1,47 @@
+.is-home
+  .main-head
+    min-height: 680px
+    height: 100vh
+    &:before
+      content: ''
+      position: absolute
+      height: 100%
+      width: 1px
+      background-color: #7d7e7f
+      left: calc((100vw - 1170px)/4)
+      top: 0
+    &:after
+      content: ''
+      position: absolute
+      height: 100%
+      width: 1px
+      right: calc((100vw - 1170px)/4)
+      top: 0
+      background-color: #b2b2b1
+  .top-line
+    border-bottom: 1px solid #808080
+  .sm-mint a, .sm-mint a.highlighted, .sm-mint a:active, .sm-mint a:focus, .sm-mint a:hover
+    padding: 45px 0
+
+.is-nohome
+  .main-head
+    background-image: none!important
+    background-color: $text
+  .sm-mint a, .sm-mint a.highlighted, .sm-mint a:active, .sm-mint a:focus, .sm-mint a:hover
+    padding: 15px 0
+  .top-line
+    padding: 18px 0
+
+
+
 .main-head
   +bg-cover
   color: #fff
-  height: 100vh
-  min-height: 680px
   position: relative
-  &:before
-    content: ''
-    position: absolute
-    height: 100%
-    width: 1px
-    background-color: #7d7e7f
-    left: calc((100vw - 1170px)/4)
-    top: 0
-  &:after
-    content: ''
-    position: absolute
-    height: 100%
-    width: 1px
-    right: calc((100vw - 1170px)/4)
-    top: 0
-    background-color: #b2b2b1
+
 
 .top-line
-  border-bottom: 1px solid #808080
+
   .container
     display: flex
     justify-content: space-between
@@ -45,7 +64,7 @@
 //main-mnu
 .sm-mint a, .sm-mint a.highlighted, .sm-mint a:active, .sm-mint a:focus, .sm-mint a:hover
   color: #fff
-  padding: 45px 0
+
   display: inline-block
   font-size: 14px
   text-transform: uppercase
