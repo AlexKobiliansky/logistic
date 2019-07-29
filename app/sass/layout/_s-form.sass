@@ -1,0 +1,103 @@
+.s-form
+  +bg-cover
+  .btn-wrap
+    text-align: center
+    margin-top: 50px
+
+form
+  margin-top: 50px
+  label
+    display: block
+    margin-bottom: 30px
+  input, textarea
+    width: 100%
+    background-color: transparent
+    border: none
+    font-size: 16px
+    line-height: 1
+    padding: 18px 20px
+    resize: none
+    &:focus
+      border-color: $accent
+    &.error
+      border-color: red!important
+      color: red!important
+      &::placeholder
+        color: red!important
+  .form-error
+    display: none
+
+.dark-form
+  input, textarea
+    color: #fff
+    border-bottom: 2px solid #a9a9a9
+    &::placeholder
+      color: #fff
+  .jq-selectbox__select
+    border-bottom: 2px solid #a9a9a9
+
+
+
+.jq-selectbox
+  width: 100%
+  //padding: 12px 20px
+  &.focused
+    .jq-selectbox__select
+      border: none
+      border-bottom: 2px solid $accent
+  &.opened
+    .jq-selectbox__trigger-arrow
+      transform: rotate(-90deg)
+      background-image: url('../img/icons/arrow-accent.svg')
+  &.has-error
+    .jq-selectbox__select
+      border-bottom: 2px solid red
+      color: red
+
+
+
+.jq-selectbox__select
+  background: transparent
+  border: none
+  text-shadow: none
+  color: #fff
+  box-shadow: none!important
+  padding: 17px 20px 18px
+  height: auto
+  line-height: 1
+  border-radius: 0
+  font-size: 16px
+  &:hover
+    background: transparent
+
+.jq-selectbox__trigger
+  border-left: none
+
+.jq-selectbox__trigger-arrow
+  border: none
+  width: 9px
+  height: 16px
+  background-image: url('../img/icons/arrow-white.svg')
+  background-size: cover
+  transform: rotate(90deg)
+  right: 22px
+  top: 17px
+
+.jq-selectbox li.disabled
+  display: none
+
+.jq-selectbox__dropdown
+  border-radius: 0
+  border-top: 2px solid $accent
+  padding-top: 10px
+  padding-bottom: 10px
+  font-size: 14px
+  li
+    +mt(.3s)
+    &:hover, &.sel
+      background: #fff
+      color: $accent
+
+
+
+

@@ -11,6 +11,13 @@
 // ≥1200px
 +media-breakpoint-down(lg)
 
+  .specicon-item
+    width: calc(25% - 24px)
+    &:nth-child(4n)
+      margin-right: 0
+    &:nth-child(5n)
+      margin-right: 30px
+
   section
     padding: 50px 0
 
@@ -46,6 +53,16 @@
 // ≥992px
 +media-breakpoint-down(md)
 
+  .jq-selectbox__select
+    line-height: 1.4
+
+  .specicon-item
+    width: calc(33.333% - 20px)
+    &:nth-child(4n)
+      margin-right: 30px
+    &:nth-child(3n)
+      margin-right: 0
+
   .about-img
     margin-left: auto
     margin-right: auto
@@ -57,6 +74,14 @@
 
 // ≥768px
 +media-breakpoint-down(sm)
+
+  .specicon-item
+    width: calc(50% - 16px)
+    &:nth-child(3n)
+      margin-right: 30px
+    &:nth-child(2n)
+      margin-right: 0!important
+
 
   .section-title
     font-size: 30px
@@ -85,6 +110,14 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .specicon-item
+    width: 100%
+    margin-right: 0
+    &:nth-child(3n)
+      margin-right: 0
+    &:nth-child(5n)
+      margin-right: 0
 
   section
     padding: 50px 0
