@@ -36,6 +36,20 @@ form
   .jq-selectbox__select
     border-bottom: 2px solid #a9a9a9
 
+.light-form
+  .jq-selectbox__select
+    color: $text
+  .jq-selectbox__trigger-arrow
+    background-image: url('../img/icons/arrow.svg')
+
+.redirect-form
+  .jq-selectbox__select
+    font-weight: 700
+    padding-left: 0
+  .jq-selectbox__trigger-arrow
+    right: 5px
+
+
 
 
 .jq-selectbox
@@ -49,6 +63,9 @@ form
     .jq-selectbox__trigger-arrow
       transform: rotate(-90deg)
       background-image: url('../img/icons/arrow-accent.svg')
+
+    .jq-selectbox__select
+      border-bottom: 2px solid transparent
   &.has-error
     .jq-selectbox__select
       border-bottom: 2px solid red

@@ -144,7 +144,7 @@ $(document).ready(function(){
 
 
     //***** FORMS *****//
-    $('.form-select').styler();
+    $('.form-select, .redirect-select').styler();
 
     var uPhone = $('.user-phone');
     uPhone.mask("+7 (999) 999-99-99",{autoclear: false});
@@ -160,8 +160,30 @@ $(document).ready(function(){
         scrollToTopOnError: false
     });
 
+
+
+    $('.redirect-form').each(function(){
+        var th = $(this);
+        var select = th.find('.jq-selectbox.redirect-select');
+        var link;
+
+        select.change(function(){
+            var selectedItem = th.find('.jq-selectbox__dropdown li.sel');
+            link = selectedItem.data('link');
+
+        });
+
+        th.submit(function(e){
+            e.preventDefault();
+            window.location.replace(link);
+        });
+    });
+
+
+
+
     //E-mail Ajax Send
-    $("form").submit(function() { //Change
+    $(".contact-form").submit(function() { //Change
         var th = $(this);
 
         $.ajax({
