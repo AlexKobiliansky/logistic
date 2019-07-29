@@ -142,6 +142,8 @@ $(document).ready(function(){
     });
     heightses();
 
+    $('.preloader').fadeOut();
+
 
     //***** FORMS *****//
     $('.form-select, .redirect-select').styler();
