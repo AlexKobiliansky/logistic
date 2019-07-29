@@ -1,0 +1,51 @@
+.s-text
+  .section-title
+    margin-bottom: 60px
+  h3
+    font-size: 22px
+    font-weight: 700
+    margin-top: 30px
+  ul, ol
+    margin-top: -10px
+    margin-bottom: 16px
+  ul
+    li
+      padding-left: 15px
+      position: relative
+      &:before
+        content: ''
+        position: absolute
+        width: 6px
+        height: 6px
+        background-color: $accent
+        left: 0
+        border-radius: 50%
+        top: 8px
+  ol
+    counter-reset: ol
+    padding-left: 0
+    li
+      display: block
+      &:before
+        content: counter(ol) ". "
+        counter-increment: ol
+        color: $accent
+        font-weight: 700
+
+
+.gal-slider
+  margin-top: 100px
+  position: relative
+  .owl-nav
+    position: absolute
+    top: calc(50% - 20px)
+    width: 100%
+    button.owl-next, button.owl-prev
+      background-image: url('../img/icons/arrow-grey.svg')
+      position: absolute
+      &:hover
+        border-color: $accent
+    button.owl-prev
+      left: -70px
+    button.owl-next
+      right: -70px

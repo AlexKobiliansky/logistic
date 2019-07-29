@@ -11,7 +11,15 @@
 // ≥1200px
 +media-breakpoint-down(lg)
 
-
+  .gal-slider
+    padding-left: 30px
+    padding-right: 30px
+    .owl-nav
+      width: calc(100% - 60px)
+      button.owl-prev
+        left: -60px
+      button.owl-next
+        right: -60px
 
   .s-contacts
     .contacts-block-wrap
@@ -149,6 +157,17 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .gal-slider
+    padding-left: 40px
+    padding-right: 40px
+    margin-top: 50px
+    .owl-nav
+      width: calc(100% - 80px)
+      button.owl-prev
+        left: -45px
+      button.owl-next
+        right: -45px
 
   .main-foot
     text-align: center

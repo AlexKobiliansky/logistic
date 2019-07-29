@@ -20,6 +20,7 @@ form
     line-height: 1
     padding: 18px 20px
     resize: none
+    border-bottom: 2px solid #a9a9a9
     &:focus
       border-color: $accent
     &.error
@@ -29,15 +30,16 @@ form
         color: red!important
   .form-error
     display: none
+  .jq-selectbox__select
+    border-bottom: 2px solid #a9a9a9
 
 .dark-form
   input, textarea
     color: #fff
-    border-bottom: 2px solid #a9a9a9
+
     &::placeholder
       color: #fff
-  .jq-selectbox__select
-    border-bottom: 2px solid #a9a9a9
+
 
 .light-form
   .jq-selectbox__select

@@ -96,6 +96,30 @@ $(document).ready(function(){
     });
 
 
+    $('.gal-slider').owlCarousel({
+        loop:true,
+        nav: true,
+        items: 4,
+        margin: 30,
+        dots: false,
+        navText: ["",""],
+        responsive: {
+            0: {
+                items: 1
+            },
+            480: {
+                items: 2
+            },
+            768: {
+                items: 3
+            },
+            992: {
+                items: 4
+            }
+        }
+    });
+
+
     $('img.svg').each(function(){
         var $img = jQuery(this);
         var imgID = $img.attr('id');
@@ -141,6 +165,8 @@ $(document).ready(function(){
         heightses();
     });
     heightses();
+
+    $('.gal-slider').photoswipe();
 
     $('.preloader').fadeOut();
 
