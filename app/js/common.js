@@ -172,6 +172,16 @@ $(document).ready(function(){
     $('.preloader').fadeOut();
 
 
+    $('.route-general').on('click', function(){
+       var th = $(this);
+       var item = th.parents('.route-item');
+       var routes = item.find('.routes');
+
+       routes.slideToggle();
+
+    });
+
+
     //***** FORMS *****//
     $('.form-select, .redirect-select').styler();
 

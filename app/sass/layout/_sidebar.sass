@@ -1,0 +1,93 @@
+.side-list-wrap
+  border: 1px solid $accent
+  padding-top: 22px
+  margin-bottom: 30px
+.side-title
+  color: $accent
+  text-transform: uppercase
+  font-weight: 700
+  font-size: 16px
+  line-height: 1.4
+  margin-bottom: 35px
+  padding: 0 27px
+
+.side-list
+  margin-bottom: 0!important
+  li
+    +mt(.3s)
+    padding: 0 25px
+    text-transform: uppercase
+    font-size: 16px
+    color: $text
+    display: flex
+    align-items: center
+    justify-content: space-between
+    line-height: 1.2
+    background-color: #fff
+    a
+      +mt(.3s)
+      color: $text
+      padding: 20px 0
+      text-decoration: none
+    &:before
+      display: none
+    .img-responsive
+      display: inline-block
+    span, a
+      width: calc(100% - 55px)
+    &:hover
+      background-color: #f7f9f9
+      color: $accent
+      a
+        color: $accent
+      .svg
+        fill: $accent
+      ul
+        background-color: #fff
+        li
+          background-color: #fff
+  .svg
+    width: 35px
+    height: auto
+    fill: $text
+    +mt(.3s)
+
+.route-item
+  font-size: 16px
+  .svg
+    width: 35px
+    height: auto
+    +mt(.3s)
+    fill: $text
+  .route-general
+    display: flex
+    justify-content: space-between
+    align-items: center
+    +mt(.3s)
+    padding: 18px 15px
+    font-size: 16px
+    text-transform: uppercase
+    background-color: #fff
+    cursor: pointer
+    color: $text
+    &:hover
+      background-color: #f7f9f9
+      color: $accent
+      .svg
+        fill: $accent
+    span
+      width: calc(100% - 55px)
+  .routes
+    padding-top: 8px
+    padding-left: 85px
+    display: none
+    .route
+      display: block
+      margin-bottom: 12px
+      +mt(.3s)
+      color: $text
+      text-decoration: none
+      &:hover
+        color: $accent
+
+

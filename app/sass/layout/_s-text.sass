@@ -31,6 +31,13 @@
         counter-increment: ol
         color: $accent
         font-weight: 700
+  a
+    color: $accent
+    text-decoration: underline
+    &:hover
+      text-decoration: none
+    &:visited
+      //color: #a9a9a9
 
 
 .gal-slider
@@ -49,3 +56,29 @@
       left: -70px
     button.owl-next
       right: -70px
+
+.textcon-wrap
+  margin-top: 50px
+
+.textcon-item
+  background-color: #f4f4f6
+  border: 1px solid $accent
+  max-width: 540px
+  width: 100%
+  margin-bottom: 30px
+  padding: 20px 45px
+  display: flex
+  align-items: center
+  font-size: 22px
+  line-height: 1.5
+  span
+    display: block
+  a
+    font-weight: 700
+    text-decoration: none
+    color: $accent
+    &:hover
+      text-decoration: underline
+  &-img
+    margin-right: 30px
+
