@@ -1,0 +1,29 @@
+.clients-slider
+  margin-top: 70px
+  .owl-nav
+    position: absolute
+    top: calc(50% - 20px)
+    width: 100%
+    button.owl-next, button.owl-prev
+      background-image: url('../img/icons/arrow-grey.svg')
+      position: absolute
+      &:hover
+        border-color: $accent
+    button.owl-prev
+      left: -70px
+    button.owl-next
+      right: -70px
+
+
+.clients-slide
+  background-color: #fff
+  width: 160px
+  height: 160px
+  display: flex
+  justify-content: center
+  align-items: center
+  padding: 20px 25px
+  .img-responsive
+    width: auto
+    max-height: 100%
+

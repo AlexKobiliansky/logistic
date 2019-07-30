@@ -119,6 +119,32 @@ $(document).ready(function(){
         }
     });
 
+    $('.clients-slider').owlCarousel({
+        loop:true,
+        nav: true,
+        items: 6,
+        margin: 30,
+        dots: false,
+        navText: ["",""],
+        responsive: {
+            0: {
+                items: 1
+            },
+            480: {
+                items: 2
+            },
+            768: {
+                items: 3
+            },
+            992: {
+                items: 5
+            },
+            1200: {
+                items: 6
+            }
+        }
+    });
+
 
     $('img.svg').each(function(){
         var $img = jQuery(this);
@@ -160,6 +186,10 @@ $(document).ready(function(){
             $('.service-item-desc').height('auto').matchHeight({byRow: true});
             $('.pcon-item').height('auto').matchHeight({byRow: true});
         }
+
+        if ($(window).width()>480) {
+            $('.abi-item-title').height('auto').matchHeight({byRow: true});
+        }
     }
 
     $(window).resize(function() {
@@ -196,7 +226,8 @@ $(document).ready(function(){
 
     $.validate({
         form : '.contact-form',
-        scrollToTopOnError: false
+        scrollToTopOnError: false,
+        // validateOnBlur : false,
     });
 
 
@@ -238,6 +269,11 @@ $(document).ready(function(){
 
 
 
+    $('.form-select').change(
+        function(e){
+            e.stopImmediatePropagation();
+            $(this).parents('.jq-selectbox').removeClass('has-error');
+        });
 
 
 
