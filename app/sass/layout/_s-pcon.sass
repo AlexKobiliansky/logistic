@@ -1,0 +1,54 @@
+.pcon-wrap
+  margin-top: 70px
+  
+.pcon-item
+  background-color: #f4f4f6
+  padding: 25px 30px 30px
+  margin-bottom: 30px
+  &-icon
+    margin-bottom: 15px
+    height: 105px
+    position: relative
+    img
+      position: absolute
+      bottom: 0
+      left: 0
+  &-title
+    font-size: 22px
+    font-weight: 700
+    line-height: 1.4
+  &-desc
+    font-size: 16px
+    margin-bottom: 25px
+  &-man
+    display: flex
+    align-items: center
+    margin-bottom: 20px
+    .man-img
+      width: 76px
+      img
+        width: 56px
+        height: auto
+        border-radius: 50%
+        overflow: hidden
+    .man-name
+      width: calc(100% - 76px)
+      text-transform: uppercase
+      font-weight: 700
+      font-size: 16px
+
+.pcon-contact
+  display: flex
+  font-size: 16px
+  margin-bottom: 20px
+  align-items: center
+  padding-left: 13px
+  .icon
+    width: 50px
+  .desc
+    width: calc(100% - 50px)
+  a
+    +mt(.3s)
+    color: $text
+    &:hover
+      color: $accent

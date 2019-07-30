@@ -158,6 +158,7 @@ $(document).ready(function(){
         if ($(window).width()>=768) {
             $('.service-item-title').height('auto').matchHeight({byRow: true});
             $('.service-item-desc').height('auto').matchHeight({byRow: true});
+            $('.pcon-item').height('auto').matchHeight({byRow: true});
         }
     }
 
