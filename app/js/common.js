@@ -2,7 +2,6 @@ $(document).ready(function(){
 
     $('.sm').smartmenus();
 
-
     //*** mobile-mnu customization *****//
     var mmenu = $('#mobile-mnu');
     var menuLogo = mmenu.data("logo");
@@ -52,7 +51,6 @@ $(document).ready(function(){
     //***** end mobile-mnu customization *****//
 
 
-
     /*slider counters functionality*/
 
         var $slider = $('#intro-slider');
@@ -63,10 +61,6 @@ $(document).ready(function(){
 
 
             $('#intro-count .total').text($totalSlides);
-
-
-
-
 
             $slider.on('changed.owl.carousel', function (e) {
                 var currentItem = e.item.index + 1;
@@ -238,12 +232,14 @@ $(document).ready(function(){
        var routes = item.find('.routes');
 
        routes.slideToggle();
+       item.siblings('.route-item').find('.routes').slideUp();
 
     });
 
 
     //***** FORMS *****//
     $('.form-select, .redirect-select').styler();
+    $('form .checkbox').styler();
 
     var uPhone = $('.user-phone');
     uPhone.mask("+7 (999) 999-99-99",{autoclear: false});
@@ -279,19 +275,55 @@ $(document).ready(function(){
         });
     });
 
-
+    //*** FORMS ***//
+    $("a[href='#popup-form'], a[href='#popup-recall']").magnificPopup({
+        type: "inline",
+        fixedContentPos: !1,
+        fixedBgPos: !0,
+        overflowY: "auto",
+        closeBtnInside: !0,
+        preloader: !1,
+        midClick: !0,
+        removalDelay: 300,
+        mainClass: "my-mfp-zoom-in",
+    });
 
 
     //E-mail Ajax Send
     $(".contact-form").submit(function() { //Change
         var th = $(this);
+        th.find('.btn').prop('disabled','disabled');
 
         $.ajax({
             type: "POST",
             url: "mail.php", //Change
             data: th.serialize()
         }).done(function() {
+            $.magnificPopup.open({
+                items: {
+                    src: '#popup-greeting'
+                },
+                type: 'inline',
 
+                fixedContentPos: false,
+                fixedBgPos: true,
+
+                overflowY: 'auto',
+
+                closeBtnInside: true,
+                preloader: false,
+
+                midClick: true,
+                removalDelay: 300,
+                mainClass: 'my-mfp-zoom-request'
+            }, 0);
+
+            setTimeout(function(){
+                $.magnificPopup.close();
+            }, 3000);
+
+            th.find(".btn").removeAttr('disabled');
+            th.trigger("reset");
         });
         return false;
     });
@@ -304,11 +336,6 @@ $(document).ready(function(){
             e.stopImmediatePropagation();
             $(this).parents('.jq-selectbox').removeClass('has-error');
         });
-
-
-
-
-
 
 
 
@@ -405,7 +432,6 @@ $(document).ready(function(){
         return null;
     }
 
-
     // Функция загрузки API Яндекс.Карт по требованию (в нашем случае при наведении)
     function loadScript(url, callback){
         var script = document.createElement("script");
@@ -449,11 +475,4 @@ $(document).ready(function(){
     };
 
     ymap();
-
-
-
-
-
-
-
 });

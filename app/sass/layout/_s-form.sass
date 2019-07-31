@@ -33,6 +33,8 @@ form
     display: none
   .jq-selectbox__select
     border-bottom: 2px solid #a9a9a9
+  input[type="checkbox"]
+    height: auto
 
 .dark-form
   input, textarea
@@ -121,6 +123,91 @@ form
       background: #fff
       color: $accent
 
+//popups
+.popup-form
+  display: block
+  margin-left: auto
+  margin-right: auto
+  width: 100%
+  max-width: 350px
+  min-width: 320px
+  background-color: #fff
+  box-shadow: 0 0 5px 2px rgba(#000, .1)
+  padding: 45px 30px
+  margin-top: 0
+  position: relative
+  input, textarea
+    font-size: 14px
+  label
+    margin-bottom: 5px
+  .btn-wrap
+    margin-top: 40px
+    text-align: center
+  h3
+    text-align: center
+    font-size: 22px
+    font-weight: 700
+    line-height: 1.4
+    margin-bottom: 25px
+  .jq-checkbox
+    border-radius: 2px
+    width: 14px
+    height: 14px
+    background: transparent
 
+  .jq-checkbox.checked .jq-checkbox__div
+   border-color: $accent
+
+
+.agreement-label
+  position: relative
+  padding-left: 25px
+  font-size: 13px
+  color: #898989
+  margin-top: 15px
+  .jq-checkbox
+    position: absolute
+    left: 0
+    top: 5px
+
+.popup-greeting
+  h3
+    text-transform: uppercase
+    font-size: 24px
+    font-family: "MagistralCBold", sans-serif
+  .svg
+    display: block
+    margin-left: auto
+    margin-right: auto
+
+
+//MY_MFP_ZOOM_IN
+.my-mfp-zoom-in
+  .zoom-anim-dialog, .popup-form, .video-popup, .popup-privacy, .popup-kwiz
+    opacity: 0
+    transition: all 0.5s ease-in-out
+    transform: scale(0.7)
+  &.mfp-ready .zoom-anim-dialog, &.mfp-ready .popup-form, &.mfp-ready .video-popup, &.mfp-ready .popup-privacy, &.mfp-ready .popup-kwiz
+    opacity: 1
+    transform: scale(1)
+  &.mfp-removing .zoom-anim-dialog, &.mfp-removing .popup-form, &.mfp-removing .video-popup, &.mfp-removing .popup-privacy, &.mfp-removing .popup-kwiz
+    transform: scale(0.7)
+    opacity: 0
+  &.mfp-bg
+    opacity: 0
+    transition: opacity 0.5s ease-out
+  &.mfp-ready.mfp-bg
+    opacity: .9
+  &.mfp-removing.mfp-bg
+    opacity: 0
+
+.mfp-close-btn-in .mfp-close
+  color: #fff
+  right: -11px
+  top: -45px
+  font-size: 40px
+  //border: 1px solid #fff
+  //border-radius: 50%
+  //font-weight: normal
 
 
