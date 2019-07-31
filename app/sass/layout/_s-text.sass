@@ -82,3 +82,55 @@
   &-img
     margin-right: 30px
 
+.review-item
+  background-color: #f7f9f9
+  padding: 30px
+  position: relative
+  margin-bottom: 30px
+  &:after
+    content: ',,'
+    font-family: "GeorgiaBold", sans-serif
+    line-height: 1
+    font-size: 300px
+    color: $accent
+    font-weight: bold
+    letter-spacing: -0.08em
+    opacity: .1
+    position: absolute
+    right: 40px
+    top: -220px
+  p
+    margin-bottom: 0
+  &-top
+    display: flex
+    align-items: center
+    margin-bottom: 25px
+  &-img
+    margin-right: 20px
+    img
+      width: 64px
+      overflow: hidden
+      border-radius: 50%
+  &-name
+    font-size: 16px
+    text-transform: uppercase
+    font-weight: 700
+    color: $accent
+    line-height: 1.4
+    .date
+      font-weight: normal
+      color: #999999
+
+.reviews-more
+  margin-top: 55px
+  text-align: center
+
+.more
+  font-weight: 700
+  font-size: 16px
+  color: $accent
+  text-decoration: underline
+  &:hover
+    color: $accent
+    text-decoration: none
+
