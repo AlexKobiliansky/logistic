@@ -145,6 +145,35 @@ $(document).ready(function(){
         }
     });
 
+    $('.comments-slider').owlCarousel({
+        loop:true,
+        nav: true,
+        items: 3,
+        margin: 30,
+        dots: false,
+        navText: ["",""],
+        responsive: {
+            0: {
+                items: 1,
+                autoHeight: true
+            },
+            480: {
+                items: 1,
+                autoHeight: true
+            },
+            768: {
+                items: 2,
+                autoHeight: false
+            },
+            992: {
+                items: 3
+            },
+            1200: {
+                items: 3
+            }
+        }
+    });
+
 
     $('img.svg').each(function(){
         var $img = jQuery(this);
@@ -185,6 +214,7 @@ $(document).ready(function(){
             $('.service-item-title').height('auto').matchHeight({byRow: true});
             $('.service-item-desc').height('auto').matchHeight({byRow: true});
             $('.pcon-item').height('auto').matchHeight({byRow: true});
+            $('.comment-slide').height('auto').matchHeight({byRow: true});
         }
 
         if ($(window).width()>480) {

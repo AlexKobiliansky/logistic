@@ -1,0 +1,37 @@
+.comments-slider
+  margin-top: 70px
+  .owl-nav
+    position: absolute
+    top: calc(50% - 20px)
+    width: 100%
+    button.owl-next, button.owl-prev
+      background-image: url('../img/icons/arrow-grey.svg')
+      position: absolute
+      &:hover
+        border-color: $accent
+    button.owl-prev
+      left: -70px
+    button.owl-next
+      right: -70px
+
+.comment-slide
+  background-color: #f4f4f6
+  padding: 90px 20px 20px
+  position: relative
+  &:after
+    content: ",,"
+    font-family: "GeorgiaBold", sans-serif
+    font-size: 104px
+    color: $accent
+    letter-spacing: -.08em
+    line-height: 1
+    opacity: .4
+    position: absolute
+    top: -35px
+    left: 15px
+  &-name
+    font-size: 22px
+    margin-bottom: 20px
+  &-desc
+    font-weight: 300
+
