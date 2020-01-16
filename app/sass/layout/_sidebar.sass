@@ -35,7 +35,7 @@
       display: inline-block
     span, a
       width: calc(100% - 55px)
-    &:hover
+    &:hover, &.active
       background-color: #f7f9f9
       color: $accent
       a
@@ -87,7 +87,12 @@
       +mt(.3s)
       color: $text
       text-decoration: none
+      &.active
+        color: $accent
       &:hover
         color: $accent
+  &.active
+    .routes
+      display: block
 
 

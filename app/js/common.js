@@ -50,7 +50,6 @@ $(document).ready(function(){
     });
     //***** end mobile-mnu customization *****//
 
-
     /*slider counters functionality*/
 
         var $slider = $('#intro-slider');
@@ -76,7 +75,6 @@ $(document).ready(function(){
 
     /*end slider counters functionality*/
 
-
     $('.intro-slider').owlCarousel({
         loop:false,
         nav: true,
@@ -88,7 +86,6 @@ $(document).ready(function(){
         animateOut: "fadeOut",
         mouseDrag: false,
     });
-
 
     $('.gal-slider').owlCarousel({
         loop:true,
@@ -168,7 +165,6 @@ $(document).ready(function(){
         }
     });
 
-
     $('img.svg').each(function(){
         var $img = jQuery(this);
         var imgID = $img.attr('id');
@@ -200,7 +196,6 @@ $(document).ready(function(){
             $img.replaceWith($svg);
         }, 'xml');
     });
-
 
     function heightses() {
 
@@ -236,7 +231,6 @@ $(document).ready(function(){
 
     });
 
-
     //***** FORMS *****//
     $('.form-select, .redirect-select').styler();
     $('form .checkbox').styler();
@@ -256,8 +250,6 @@ $(document).ready(function(){
         // validateOnBlur : false,
     });
 
-
-
     $('.redirect-form').each(function(){
         var th = $(this);
         var select = th.find('.jq-selectbox.redirect-select');
@@ -275,6 +267,17 @@ $(document).ready(function(){
         });
     });
 
+
+    // $('.redirect-form').each(function(){
+    //     var th = $(this);
+    //     var link = $(this).find('.btn').data('link');
+    //
+    //     th.submit(function(e){
+    //         e.preventDefault();
+    //         window.location.replace(link);
+    //     });
+    // });
+
     //*** FORMS ***//
     $("a[href='#popup-form'], a[href='#popup-recall']").magnificPopup({
         type: "inline",
@@ -288,7 +291,6 @@ $(document).ready(function(){
         mainClass: "my-mfp-zoom-in",
     });
 
-
     //E-mail Ajax Send
     $(".contact-form").submit(function() { //Change
         var th = $(this);
@@ -296,7 +298,7 @@ $(document).ready(function(){
 
         $.ajax({
             type: "POST",
-            url: "mail.php", //Change
+            url: "/mail.php", //Change
             data: th.serialize()
         }).done(function() {
             $.magnificPopup.open({
@@ -328,8 +330,6 @@ $(document).ready(function(){
         return false;
     });
     //***** end FORMS *****//
-
-
 
     $('.form-select').change(
         function(e){

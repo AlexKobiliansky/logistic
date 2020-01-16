@@ -71,13 +71,42 @@
 				<nav class="main-mnu">
 					<ul class="sm sm-mint">
 						<li><a href="#0" title="Грузоперевозки">Грузоперевозки</a></li>
-						<li><a href="#0" title="Маршруты">Маршруты</a></li>
+						<li>
+							<a href="#0" title="Маршруты">Маршруты</a>
+							<ul>
+								<li>
+									<a href="#0">СНГ</a>
+									<ul>
+										<li><a href="#0">Автоперевозки</a></li>
+										<li><a href="#0">Авиаперевозки</a></li>
+										<li><a href="#0">Железнодорожные перевозки Железнодорожные перевозки</a></li>
+										<li><a href="#0">Контейнерные перевозки</a></li>
+										<li><a href="#0">Морские перевозки</a></li>
+									</ul>
+
+
+								</li>
+								<li>
+									<a href="#0">Европа</a>
+
+									<ul>
+										<li><a href="#0">1</a></li>
+										<li><a href="#0">Авиаперевозки</a></li>
+										<li><a href="#0">Железнодорожные перевозки Железнодорожные перевозки</a></li>
+										<li><a href="#0">Контейнерные перевозки</a></li>
+										<li><a href="#0">Морские перевозки</a></li>
+									</ul>
+								</li>
+								<li><a href="#0">Азия</a></li>
+								<li><a href="#0">Африка</a></li>
+							</ul>
+						</li>
 						<li>
 							<a href="#0" title="Транспорт">Транспорт</a>
 							<ul>
 								<li><a href="#0">Автоперевозки</a></li>
 								<li><a href="#0">Авиаперевозки</a></li>
-								<li><a href="#0">Железнодорожные перевозки</a></li>
+								<li><a href="#0">Железнодорожные перевозки Железнодорожные перевозки</a></li>
 								<li><a href="#0">Контейнерные перевозки</a></li>
 								<li><a href="#0">Морские перевозки</a></li>
 							</ul>
@@ -165,6 +194,12 @@
 					<h2 class="section-title">Мы международная транспортная компания</h2>
 					<div class="about-desc">
 						<p>Международная транспортная компания "Международный Сервис ЛОГИСТИКА" оказывает услуги региональных и международных грузоперевозок собственным и привлеченным транспортом для организаций и частных лиц. Обеспечиваем полный комплекс сопутствующих услуг. Это может быть например разборка, сборка и упаковка мебели, обрешетка оборудования, такелажные работы, подготовка и оформление товарно транспортных документов, сертификатов, разрешений различных органов и инстанций, подсчет товара при погрузочно-разгрузочных работах, сюрвейерские услуги, охрана груза, таможенное оформление и многое другое. Для обеспечения погрузочно-разгрузочных работ предоставим грузчиков и погрузочную технику.</p>
+						<ul>
+							<li>Автотранспортом;</li>
+							<li>Железнодорожными или морскими контейнерами;</li>
+							<li>Воздушным путем;</li>
+							<li>Спецтранспортом.</li>
+						</ul>
 					</div>
 					<div class="about-contacts">
 						<a href="tel:+78312666600" class="call">+7 (831) 266 66 00</a>
@@ -283,6 +318,7 @@
 						<div class="spec-item" style="background-image: url('img/serv-img-1.jpg');">
 							<div class="spec-item-content">
 								<div class="spec-item-title">Грузоперевозки</div>
+								<span>Несколько слов о типе груза, в две-три строки Несколько слов о типе груза, в две-три строки Несколько слов о типе груза, в две-три строки</span>
 								<a href="#0">Подробнее</a>
 							</div>
 						</div>
@@ -618,7 +654,7 @@
 						</label>
 
 						<div class="btn-wrap">
-							<button type="submit" class="btn btn-blue">Показать</button>
+							<button type="submit" class="btn btn-blue" data-link="https://instagram.com">Показать</button>
 						</div>
 					</form>
 				</div>
@@ -670,8 +706,11 @@
 	<!-- ======= SECTION CONTACTS START ======= -->
 	<section class="s-contacts">
 		<div class="s-map">
-			<div class="loader loader-default"></div>
-			<div id="map" data-att="55.753171" data-long="37.620540" data-zoom="9" data-marker="img/icons/map-marker.png" style="background-image: url('img/bg-map.jpg');"></div>
+<!--			<div class="loader loader-default"></div>-->
+<!--			<div id="map" data-att="55.753171" data-long="37.620540" data-zoom="9" data-marker="img/icons/map-marker.png" style="background-image: url('img/bg-map.jpg');"></div>-->
+			<div id="map-const">
+				<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A924cd9bc73f5b67158703d4c7f7c18e62ea1b24bdb12fd37b720951257579a51&amp;width=100%25&amp;height=525&amp;lang=ru_RU&amp;scroll=true"></script>
+			</div>
 		</div>
 
 		<div class="contacts-block-wrap">
@@ -896,7 +935,6 @@
 		<h3>Спасибо, ваша заявка отправлена</h3>
 		<img src="img/icons/telegram-icon.svg" alt="alt" class="svg">
 	</div>
-
 </div>
 
 

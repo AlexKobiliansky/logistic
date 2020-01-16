@@ -40,16 +40,12 @@
       a, a.highlighted, a:active, a:focus, a:hover
         padding: 10px 20px
 
-
-
 .main-head
   +bg-cover
   color: #fff
   position: relative
 
-
 .top-line
-
   .container
     display: flex
     justify-content: space-between
@@ -71,7 +67,6 @@
 
 //main-mnu
 .sm-mint a, .sm-mint a.highlighted, .sm-mint a:active, .sm-mint a:focus, .sm-mint a:hover
-  color: #fff
   display: inline-block
   font-size: 14px
   text-transform: uppercase
@@ -79,14 +74,14 @@
   +mt(.3s)
   background-color: transparent
   font-weight: normal
-  &:after
-    display: block
-    content: attr(title)
-    font-weight: bold
-    height: 0
-    overflow: hidden
-    visibility: hidden
-    +mt(.3s)
+  //&:after
+  //  display: block
+  //  content: attr(title)
+  //  font-weight: bold
+  //  height: 0
+  //  overflow: hidden
+  //  visibility: hidden
+  //  +mt(.3s)
 
 .sm-mint a.has-submenu
   padding-right: 0
@@ -94,8 +89,15 @@
 .sm-mint
   a
     border-bottom: 2px solid transparent
+    color: #fff
     &:hover
-      border-color: #fff
+      border-color: $accent
+      color: $accent
+  >li.current-menu-item
+    a
+      border-color: $accent
+      color: $accent
+
 
 .sm-mint a .sub-arrow
   display: none
@@ -105,7 +107,11 @@
 
 .sm-mint a:active, .sm-mint a:focus, .sm-mint a:hover
   background-color: transparent
-  font-weight: 700
+  //font-weight: 700
+
+.sm-mint a.highlighted
+  color: $accent
+
 
 .sm-mint
   li
@@ -120,7 +126,8 @@
     font-size: 14px
     border-radius: 0
     border-top: 2px solid $accent
-    width: auto!important
+    width: 100%
+    max-width: 300px
     padding: 10px 0
     top: 90px!important
     li
@@ -128,17 +135,22 @@
       margin-right: 0
       width: 100%
       text-align: left
-      white-space: nowrap
       a
         text-align: left
         text-transform: none
-        white-space: nowrap
+        background-color: #fff!important
+        &.highlighted
+          color: $text
+          text-transform: none
         &:hover
           text-align: left
           background-color: #fff
           color: $accent
           font-weight: normal
           text-transform: none
+      ul
+        margin-left: 100%!important
+        border-radius: 0
 //end main-mnu
 
 

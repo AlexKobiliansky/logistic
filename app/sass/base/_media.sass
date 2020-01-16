@@ -11,6 +11,13 @@
 // ≥1200px
 +media-breakpoint-down(lg)
 
+  .contacts-table
+    td
+      &:first-child
+        width: 60%
+      &:last-child
+        width: 40%
+
   .gal-slider, .clients-slider, .comments-slider
     padding-left: 30px
     padding-right: 30px
@@ -44,6 +51,11 @@
     &:before
       left: 0
 
+  .is-home
+    .main-head
+      height: auto
+
+
   .main-head
     height: auto
     &:before
@@ -70,8 +82,20 @@
 // ≥992px
 +media-breakpoint-down(md)
 
+  .s-worker
+    .pcon-contact
+      font-size: 16px
+
+  .worker
+    &-content
+      font-size: 16px
+    &-post
+      span
+        margin-right: 10px
+
   .service-head
     padding-bottom: 150px
+    min-height: 350px
     h1
       font-size: 40px
 
@@ -114,6 +138,35 @@
 
 // ≥768px
 +media-breakpoint-down(sm)
+
+  .contacts-table
+    font-size: 14px
+    td
+      &:first-child
+        width: 50%
+      &:last-child
+        width: 50%
+
+  .worker
+    &-name
+      font-size: 30px
+    &-content
+      flex-direction: column
+    &-img-wrap
+      width: 100%
+      margin-bottom: 20px
+      height: auto
+    &-img
+      display: block
+      object-fit: unset
+      width: auto
+      max-width: 100%
+      height: auto
+      margin-left: auto
+      margin-right: auto
+
+    &-main
+      width: 100%
 
   .clients-slide
     width: 210px
@@ -171,6 +224,20 @@
 // ≥480px
 +media-breakpoint-down(xs)
 
+  .contacts-table
+    tr
+      display: block
+    td
+      display: block
+      &:first-child
+        width: 100%
+      &:last-child
+        width: 100%
+
+  .worker-name
+    font-size: 22px
+    line-height: 1
+
   .comments-slider
     padding: 0
     margin-bottom: 40px
@@ -185,6 +252,7 @@
 
   .service-head
     padding: 50px 0 70px
+    min-height: 180px
     h1
       font-size: 24px
 
